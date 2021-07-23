@@ -10,6 +10,17 @@ module.exports.getPointsRelais = async (req, res) => {
     }
 };
 
+module.exports.getPointRelais = async(req, res) => {
+    const id = req.params.id;
+    try {
+        const pointRelais = await PointRelais.findOne({id});
+        res.status(200).send(pointRelais);
+    } catch (err) {
+        console.log(err);
+        res.status(400).send("error finding point Relais");
+    }
+}
+
 module.exports.addPointRelais = async (req, res) => {
     const {id,name,adresse,latitude,longitude} = req.body;
     try {
