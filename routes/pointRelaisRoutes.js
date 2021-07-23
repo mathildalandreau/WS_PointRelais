@@ -6,3 +6,4 @@ router.get('/', pointRelaisController.getPointsRelais);
 router.post('/', pointRelaisController.addPointRelais);
 
 module.exports = router;
+

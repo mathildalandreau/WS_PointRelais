@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const router = require('./routes/pointRelaisRoutes');
 const app = express();
 
+const cors = require('cors');
+
+app.use(cors());
+
 const dbUri = 'mongodb+srv://root:root@cluster0.3dlw8.mongodb.net/test'; //atlas
 mongoose.connect(dbUri,
     {
