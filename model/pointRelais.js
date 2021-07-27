@@ -9,7 +9,13 @@ const PointRelaisSchema = new Schema({
         codePostal: String
     },
     latitude: { type: String },
-    longitude: { type: String }
+    longitude: { type: String },
+    horaires: [{
+        jour: String,
+        matin: String,
+        soir: String,
+        jourentier: String
+    }]
 });
 
 const PointRelais = mongoose.model('pointRelai', PointRelaisSchema);
